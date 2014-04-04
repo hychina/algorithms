@@ -4,7 +4,7 @@ package chapter1;
 public class Ex4 {
 
 	public static void main(String[] args) {
-		boolean res = isAnagram("ascfasd", "faadssd");
+		boolean res = isAnagram("ascfasd", "faacssd");
 		System.out.println(res);
 	}
 	
@@ -14,7 +14,7 @@ public class Ex4 {
 		for (char c : a.toCharArray())
 			count[c]++;
 		for (char c : b.toCharArray()) {
-			if (count[c] == 0) return false;
+			if (count[c]-- == 0) return false;
 		}
 		return true;
 	}
