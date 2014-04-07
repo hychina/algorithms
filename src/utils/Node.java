@@ -16,4 +16,11 @@ public class Node<T> {
 	public String toString() {
 		return this.data.toString();
 	}
+    public void showList() {
+        Node<T> node = this;
+        while (node != null) {
+            System.out.println(node.data);
+            node = node.next;
+        }
+    }
 }

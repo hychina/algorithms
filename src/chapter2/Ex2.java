@@ -29,13 +29,4 @@ public class Ex2 {
 		}
 		return n;
 	}
-	public static Node<Integer> findNthToLastRecursive(Node<Integer> node, int nth) {
-		return null;
-	}
-	private static int distanceToNth(Node<Integer> node, int nth) {
-		if (node == null) return nth; 
-		int d = distanceToNth(node.next, nth);
-		d--;
-		if (d == 0) 
-	}
 }
