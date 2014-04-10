@@ -266,9 +266,17 @@ public class BST<Key extends Comparable<Key>, Value> {
         h = h + 1;
         return h;
     }
+    
+    public boolean isBalanced() { 
+    	return isBalanced(this.root) == -1 ? false : true;
+    }
 
-    public boolean isBalanced(Node x) {
-        
+    private int isBalanced(Node x) { 
+    	if (x == null) return 0;
+    	int l = isBalanced(x.left);
+    	int r = isBalanced(x.right);
+    	if (l == -1 || r == -1 || l != r) return -1;
+    	else return l + 1;
     }
 
     private class Node {
